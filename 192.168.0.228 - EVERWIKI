@@ -1,0 +1,183 @@
+EVERWIKI - EVERWIKI.eversec.orp
+
+got admin on...
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-05-31 23:09 EDT
+Nmap scan report for 192.168.0.228
+Host is up (0.072s latency).
+Not shown: 985 closed ports
+PORT      STATE SERVICE       VERSION
+21/tcp    open  ftp?
+| fingerprint-strings: 
+|   DNSStatusRequest, DNSVersionBindReq, GenericLines, LANDesk-RC, LDAPBindReq, NULL, RPCCheck, SMBProgNeg, TerminalServer, X11Probe: 
+|     220 Bitvise SSH Server 8.32
+|   FourOhFourRequest, GetRequest, HTTPOptions, Help, Kerberos, LPDString, RTSPRequest, SSLSessionReq, TLSSessionReq: 
+|     220 Bitvise SSH Server 8.32
+|     Unrecognized command
+|   LDAPSearchReq: 
+|     220 Bitvise SSH Server 8.32
+|     Unrecognized command
+|     Unrecognized command
+|   SIPOptions: 
+|     220 Bitvise SSH Server 8.32
+|     Unrecognized command
+|     Unrecognized command
+|     Unrecognized command
+|     Unrecognized command
+|     Unrecognized command
+|     Unrecognized command
+|     Unrecognized command
+|     Unrecognized command
+|     Unrecognized command
+|_    Unrecognized command
+| ftp-syst: 
+|_  SYST: UNIX
+| ssl-cert: Subject: commonName=Bitvise SSH Server
+| Not valid before: 2019-05-21T00:00:00
+|_Not valid after:  2034-05-21T00:00:00
+|_ssl-date: 2019-06-01T03:13:05+00:00; 0s from scanner time.
+22/tcp    open  ssh           Bitvise WinSSHD 8.32 (FlowSsh 8.32; protocol 2.0)
+| ssh-hostkey: 
+|   3072 2a:49:ee:83:df:53:37:68:a8:74:7b:f5:3d:bf:fa:4f (RSA)
+|_  384 b1:7c:fb:1b:c7:88:4b:08:79:11:3d:05:17:27:8f:07 (ECDSA)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  Windows Server 2012 R2 Standard Evaluation 9600 microsoft-ds (workgroup: EVERSEC)
+3389/tcp  open  ms-wbt-server Microsoft Terminal Service
+| ssl-cert: Subject: commonName=EVERWIKI.eversec.corp
+| Not valid before: 2019-05-21T14:01:11
+|_Not valid after:  2019-11-20T14:01:11
+|_ssl-date: 2019-06-01T03:13:05+00:00; 0s from scanner time.
+8090/tcp  open  opsmessaging?
+| fingerprint-strings: 
+|   DNSStatusRequest: 
+|     HTTP/1.1 400 
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 2255
+|     Date: Sat, 01 Jun 2019 03:10:58 GMT
+|     Connection: close
+|     <!doctype html><html lang="en"><head><title>HTTP Status 400 
+|     Request</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+|   HTTPOptions: 
+|     HTTP/1.1 200 
+|     MS-Author-Via: DAV
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Length: 0
+|     Date: Sat, 01 Jun 2019 03:10:47 GMT
+|     Connection: close
+|   RPCCheck: 
+|     HTTP/1.1 400 
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 2255
+|     Date: Sat, 01 Jun 2019 03:10:53 GMT
+|     Connection: close
+|     <!doctype html><html lang="en"><head><title>HTTP Status 400 
+|_    Request</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+49152/tcp open  msrpc         Microsoft Windows RPC
+49153/tcp open  msrpc         Microsoft Windows RPC
+49154/tcp open  msrpc         Microsoft Windows RPC
+49155/tcp open  msrpc         Microsoft Windows RPC
+49156/tcp open  msrpc         Microsoft Windows RPC
+49157/tcp open  unknown
+49161/tcp open  msrpc         Microsoft Windows RPC
+49163/tcp open  msrpc         Microsoft Windows RPC
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port21-TCP:V=7.60%I=7%D=5/31%Time=5CF1ECAD%P=x86_64-pc-linux-gnu%r(NULL
+SF:,1D,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n")%r(GenericLines,1D,"
+SF:220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n")%r(Help,37,"220\x20Bitvis
+SF:e\x20SSH\x20Server\x208\.32\r\n500\x20Unrecognized\x20command\r\n")%r(G
+SF:etRequest,37,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n500\x20Unreco
+SF:gnized\x20command\r\n")%r(HTTPOptions,37,"220\x20Bitvise\x20SSH\x20Serv
+SF:er\x208\.32\r\n500\x20Unrecognized\x20command\r\n")%r(RTSPRequest,37,"2
+SF:20\x20Bitvise\x20SSH\x20Server\x208\.32\r\n500\x20Unrecognized\x20comma
+SF:nd\r\n")%r(RPCCheck,1D,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n")%
+SF:r(DNSVersionBindReq,1D,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n")%
+SF:r(DNSStatusRequest,1D,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n")%r
+SF:(SSLSessionReq,37,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n500\x20U
+SF:nrecognized\x20command\r\n")%r(TLSSessionReq,37,"220\x20Bitvise\x20SSH\
+SF:x20Server\x208\.32\r\n500\x20Unrecognized\x20command\r\n")%r(Kerberos,3
+SF:7,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n500\x20Unrecognized\x20c
+SF:ommand\r\n")%r(SMBProgNeg,1D,"220\x20Bitvise\x20SSH\x20Server\x208\.32\
+SF:r\n")%r(X11Probe,1D,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n")%r(F
+SF:ourOhFourRequest,37,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n500\x2
+SF:0Unrecognized\x20command\r\n")%r(LPDString,37,"220\x20Bitvise\x20SSH\x2
+SF:0Server\x208\.32\r\n500\x20Unrecognized\x20command\r\n")%r(LDAPSearchRe
+SF:q,51,"220\x20Bitvise\x20SSH\x20Server\x208\.32\r\n500\x20Unrecognized\x
+SF:20command\r\n500\x20Unrecognized\x20command\r\n")%r(LDAPBindReq,1D,"220
+SF:\x20Bitvise\x20SSH\x20Server\x208\.32\r\n")%r(SIPOptions,121,"220\x20Bi
+SF:tvise\x20SSH\x20Server\x208\.32\r\n500\x20Unrecognized\x20command\r\n50
+SF:0\x20Unrecognized\x20command\r\n500\x20Unrecognized\x20command\r\n500\x
+SF:20Unrecognized\x20command\r\n500\x20Unrecognized\x20command\r\n500\x20U
+SF:nrecognized\x20command\r\n500\x20Unrecognized\x20command\r\n500\x20Unre
+SF:cognized\x20command\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecog
+SF:nized\x20command\r\n")%r(LANDesk-RC,1D,"220\x20Bitvise\x20SSH\x20Server
+SF:\x208\.32\r\n")%r(TerminalServer,1D,"220\x20Bitvise\x20SSH\x20Server\x2
+SF:08\.32\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8090-TCP:V=7.60%I=7%D=5/31%Time=5CF1ECB7%P=x86_64-pc-linux-gnu%r(HT
+SF:TPOptions,97,"HTTP/1\.1\x20200\x20\r\nMS-Author-Via:\x20DAV\r\nContent-
+SF:Type:\x20text/html;charset=UTF-8\r\nContent-Length:\x200\r\nDate:\x20Sa
+SF:t,\x2001\x20Jun\x202019\x2003:10:47\x20GMT\r\nConnection:\x20close\r\n\
+SF:r\n")%r(RPCCheck,96B,"HTTP/1\.1\x20400\x20\r\nContent-Type:\x20text/htm
+SF:l;charset=utf-8\r\nContent-Language:\x20en\r\nContent-Length:\x202255\r
+SF:\nDate:\x20Sat,\x2001\x20Jun\x202019\x2003:10:53\x20GMT\r\nConnection:\
+SF:x20close\r\n\r\n<!doctype\x20html><html\x20lang=\"en\"><head><title>HTT
+SF:P\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x20Request</title><style\x20t
+SF:ype=\"text/css\">h1\x20{font-family:Tahoma,Arial,sans-serif;color:white
+SF:;background-color:#525D76;font-size:22px;}\x20h2\x20{font-family:Tahoma
+SF:,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+SF:\x20h3\x20{font-family:Tahoma,Arial,sans-serif;color:white;background-c
+SF:olor:#525D76;font-size:14px;}\x20body\x20{font-family:Tahoma,Arial,sans
+SF:-serif;color:black;background-color:white;}\x20b\x20{font-family:Tahoma
+SF:,Arial,sans-serif;color:white;background-color:#525D76;}\x20p\x20{font-
+SF:family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:1
+SF:2px;}\x20a\x20{color:black;}\x20a\.name\x20{color:black;}\x20\.line\x20
+SF:{height:1px;background-color:#525D76;border:none;}</style></head><bod")
+SF:%r(DNSStatusRequest,96B,"HTTP/1\.1\x20400\x20\r\nContent-Type:\x20text/
+SF:html;charset=utf-8\r\nContent-Language:\x20en\r\nContent-Length:\x20225
+SF:5\r\nDate:\x20Sat,\x2001\x20Jun\x202019\x2003:10:58\x20GMT\r\nConnectio
+SF:n:\x20close\r\n\r\n<!doctype\x20html><html\x20lang=\"en\"><head><title>
+SF:HTTP\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x20Request</title><style\x
+SF:20type=\"text/css\">h1\x20{font-family:Tahoma,Arial,sans-serif;color:wh
+SF:ite;background-color:#525D76;font-size:22px;}\x20h2\x20{font-family:Tah
+SF:oma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16p
+SF:x;}\x20h3\x20{font-family:Tahoma,Arial,sans-serif;color:white;backgroun
+SF:d-color:#525D76;font-size:14px;}\x20body\x20{font-family:Tahoma,Arial,s
+SF:ans-serif;color:black;background-color:white;}\x20b\x20{font-family:Tah
+SF:oma,Arial,sans-serif;color:white;background-color:#525D76;}\x20p\x20{fo
+SF:nt-family:Tahoma,Arial,sans-serif;background:white;color:black;font-siz
+SF:e:12px;}\x20a\x20{color:black;}\x20a\.name\x20{color:black;}\x20\.line\
+SF:x20{height:1px;background-color:#525D76;border:none;}</style></head><bo
+SF:d");
+MAC Address: 00:17:FB:00:00:03 (FA)
+Device type: general purpose
+Running: Microsoft Windows 2012|7|8.1
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_7:::ultimate cpe:/o:microsoft:windows_8.1
+OS details: Microsoft Windows Server 2012 R2 Update 1, Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1
+Network Distance: 1 hop
+Service Info: Host: EVERWIKI; OS: Windows; CPE: cpe:/o:microsoft:windows
+Host script results:
+|_nbstat: NetBIOS name: EVERWIKI, NetBIOS user: <unknown>, NetBIOS MAC: 00:17:fb:00:00:03 (FA)
+| smb-os-discovery: 
+|   OS: Windows Server 2012 R2 Standard Evaluation 9600 (Windows Server 2012 R2 Standard Evaluation 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_server_2012::-
+|   Computer name: EVERWIKI
+|   NetBIOS computer name: EVERWIKI\x00
+|   Domain name: eversec.corp
+|   Forest name: eversec.corp
+|   FQDN: EVERWIKI.eversec.corp
+|_  System time: 2019-05-31T23:13:05-04:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-05-31 23:13:05
+|_  start_date: 2019-05-31 21:21:36

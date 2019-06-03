@@ -1,0 +1,146 @@
+EXCHANGE SERVER - EVEXC.eversec.rocks
+
+3V3R53c1Nfl4M32 <- eversecadmin flag.txt
+
+$ sudo nmap -sS -sC -O -n 192.168.0.222
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-05-31 20:12 EDT
+Nmap scan report for 192.168.0.222
+Host is up (0.0015s latency).
+Not shown: 965 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+| ftp-syst: 
+|_  SYST: UNIX
+| ssl-cert: Subject: commonName=Bitvise SSH Server
+| Not valid before: 2019-05-19T00:00:00
+|_Not valid after:  2034-05-19T00:00:00
+|_ssl-date: 2019-06-01T00:13:42+00:00; 0s from scanner time.
+22/tcp   open  ssh
+| ssh-hostkey: 
+|   3072 52:6b:a2:9e:9d:ed:4c:ff:c8:44:4d:19:d0:b6:9c:32 (RSA)
+|_  384 a3:8e:6d:5c:f9:64:a2:4f:ec:9c:fa:37:af:b1:5d:f7 (ECDSA)
+25/tcp   open  smtp
+| smtp-commands: EVEXC.eversec.corp Hello [192.168.1.45], SIZE 37748736, PIPELINING, DSN, ENHANCEDSTATUSCODES, STARTTLS, X-ANONYMOUSTLS, AUTH NTLM, X-EXPS GSSAPI NTLM, 8BITMIME, BINARYMIME, CHUNKING, XRDST, 
+|_ This server supports the following commands: HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH BDAT 
+| ssl-cert: Subject: commonName=EVEXC
+| Subject Alternative Name: DNS:EVEXC, DNS:EVEXC.eversec.corp
+| Not valid before: 2019-05-29T03:51:07
+|_Not valid after:  2024-05-29T03:51:07
+|_ssl-date: 2019-06-01T00:13:43+00:00; 0s from scanner time.
+53/tcp   open  domain
+80/tcp   open  http
+|_http-title: 403 - Forbidden: Access is denied.
+81/tcp   open  hosts2-ns
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+| ssl-cert: Subject: commonName=EVEXC
+| Subject Alternative Name: DNS:EVEXC, DNS:EVEXC.eversec.corp
+| Not valid before: 2019-05-29T03:51:07
+|_Not valid after:  2024-05-29T03:51:07
+|_ssl-date: 2019-06-01T00:13:43+00:00; 0s from scanner time.
+443/tcp  open  https
+| http-title: Outlook Web App
+|_Requested resource was https://192.168.0.222/owa/auth/logon.aspx?url=https%3a%2f%2f192.168.0.222%2fowa%2f&reason=0
+| ssl-cert: Subject: commonName=EVEXC
+| Subject Alternative Name: DNS:EVEXC, DNS:EVEXC.eversec.corp
+| Not valid before: 2019-05-29T03:51:07
+|_Not valid after:  2024-05-29T03:51:07
+|_ssl-date: 2019-06-01T00:13:43+00:00; 0s from scanner time.
+444/tcp  open  snpp
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+465/tcp  open  smtps
+|_smtp-commands: Couldn't establish connection on port 465
+| smtp-ntlm-info: 
+|   Target_Name: EVERSEC
+|   NetBIOS_Domain_Name: EVERSEC
+|   NetBIOS_Computer_Name: EVEXC
+|   DNS_Domain_Name: eversec.corp
+|   DNS_Computer_Name: EVEXC.eversec.corp
+|   DNS_Tree_Name: eversec.corp
+|_  Product_Version: 6.3.9600
+587/tcp  open  submission
+| smtp-commands: EVEXC.eversec.corp Hello [192.168.1.45], SIZE 36700160, PIPELINING, DSN, ENHANCEDSTATUSCODES, STARTTLS, AUTH GSSAPI NTLM, 8BITMIME, BINARYMIME, CHUNKING, 
+|_ This server supports the following commands: HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH BDAT 
+| smtp-ntlm-info: 
+|   Target_Name: EVERSEC
+|   NetBIOS_Domain_Name: EVERSEC
+|   NetBIOS_Computer_Name: EVEXC
+|   DNS_Domain_Name: eversec.corp
+|   DNS_Computer_Name: EVEXC.eversec.corp
+|   DNS_Tree_Name: eversec.corp
+|_  Product_Version: 6.3.9600
+| ssl-cert: Subject: commonName=EVEXC
+| Subject Alternative Name: DNS:EVEXC, DNS:EVEXC.eversec.corp
+| Not valid before: 2019-05-29T03:51:07
+|_Not valid after:  2024-05-29T03:51:07
+|_ssl-date: 2019-06-01T00:13:42+00:00; 0s from scanner time.
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+| ssl-cert: Subject: commonName=EVEXC
+| Subject Alternative Name: DNS:EVEXC, DNS:EVEXC.eversec.corp
+| Not valid before: 2019-05-29T03:51:07
+|_Not valid after:  2024-05-29T03:51:07
+|_ssl-date: 2019-06-01T00:13:41+00:00; -1s from scanner time.
+808/tcp  open  ccproxy-http
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+2525/tcp open  ms-v-worlds
+3268/tcp open  globalcatLDAP
+3269/tcp open  globalcatLDAPssl
+| ssl-cert: Subject: commonName=EVEXC
+| Subject Alternative Name: DNS:EVEXC, DNS:EVEXC.eversec.corp
+| Not valid before: 2019-05-29T03:51:07
+|_Not valid after:  2024-05-29T03:51:07
+|_ssl-date: 2019-06-01T00:13:44+00:00; 0s from scanner time.
+3389/tcp open  ms-wbt-server
+| ssl-cert: Subject: commonName=EVEXC.eversec.corp
+| Not valid before: 2019-05-21T13:56:23
+|_Not valid after:  2019-11-20T13:56:23
+|_ssl-date: 2019-06-01T00:13:41+00:00; -1s from scanner time.
+3800/tcp open  pwgpsi
+3801/tcp open  ibm-mgr
+3828/tcp open  neteh
+5060/tcp open  sip
+6001/tcp open  X11:1
+6005/tcp open  X11:5
+|_x11-access: ERROR: Script execution failed (use -d to debug)
+6006/tcp open  X11:6
+|_x11-access: ERROR: Script execution failed (use -d to debug)
+6007/tcp open  X11:7
+|_x11-access: ERROR: Script execution failed (use -d to debug)
+MAC Address: 00:17:FB:00:00:02 (FA)
+Device type: general purpose
+Running: Microsoft Windows 2012|7|8.1
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_7:::ultimate cpe:/o:microsoft:windows_8.1
+OS details: Microsoft Windows Server 2012 R2 Update 1, Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1
+Network Distance: 1 hop
+
+Host script results:
+|_nbstat: NetBIOS name: EVEXC, NetBIOS user: <unknown>, NetBIOS MAC: 00:17:fb:00:00:02 (FA)
+| smb-os-discovery: 
+|   OS: Windows Server 2012 R2 Standard Evaluation 9600 (Windows Server 2012 R2 Standard Evaluation 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_server_2012::-
+|   Computer name: EVEXC
+|   NetBIOS computer name: EVEXC\x00
+|   Domain name: eversec.corp
+|   Forest name: eversec.corp
+|   FQDN: EVEXC.eversec.corp
+|_  System time: 2019-05-31T20:13:43-04:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2019-05-31 20:13:44
+|_  start_date: 2019-05-31 19:32:55
+

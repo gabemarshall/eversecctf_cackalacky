@@ -1,0 +1,16 @@
+Nmap scan report for 192.168.0.210
+Nmap scan report for 192.168.0.222
+Nmap scan report for 192.168.0.232
+Nmap done: 55 IP addresses (3 hosts up) scanned in 2.13 seconds
+
+$ sudo nmap -sS -sC -O -n 192.168.0.210
+
+
+
+Nmap scan report for EVDC (192.168.0.210)
+Nmap scan report for SQL (192.168.0.220)
+Nmap scan report for webmail.eversec.rocks (192.168.0.222)
+Nmap scan report for EVERWIKI (192.168.0.228)
+Nmap scan report for 192.168.0.230
+
+

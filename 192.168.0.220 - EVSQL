@@ -1,0 +1,117 @@
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           Bitvise WinSSHD 8.33 (FlowSsh 8.33; protocol 2.0)
+| ssh-hostkey: 
+|   3072 89:3d:03:ec:7d:9f:94:a1:ec:ae:db:f2:79:b3:bc:70 (RSA)
+|_  384 95:6b:83:a3:e8:7e:5e:19:d5:ef:67:5a:03:7e:43:61 (ECDSA)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1433/tcp open  ms-sql-s      Microsoft SQL Server  14.00.1000.00
+| ms-sql-ntlm-info: 
+|   Target_Name: EVERSEC
+|   NetBIOS_Domain_Name: EVERSEC
+|   NetBIOS_Computer_Name: SQL
+|   DNS_Domain_Name: eversec.corp
+|   DNS_Computer_Name: SQL.eversec.corp
+|   DNS_Tree_Name: eversec.corp
+|_  Product_Version: 10.0.14393
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2019-06-01T20:15:39
+|_Not valid after:  2049-06-01T20:15:39
+|_ssl-date: 2019-06-01T22:14:32+00:00; +8h10m51s from scanner time.
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=SQL.eversec.corp
+| Not valid before: 2019-05-31T01:42:52
+|_Not valid after:  2019-11-30T01:42:52
+|_ssl-date: 2019-06-01T22:14:33+00:00; +8h10m51s from scanner time.
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 8h10m51s, deviation: 0s, median: 8h10m50s
+| ms-sql-info: 
+|   192.168.0.220:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 
+|_    TCP port: 1433
+|_nbstat: NetBIOS name: SQL, NetBIOS user: <unknown>, NetBIOS MAC: 00:15:5d:00:c7:25 (Microsoft)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=SQL.eversec.corp
+| Not valid before: 2019-05-31T01:42:52
+|_Not valid after:  2019-11-30T01:42:52
+|_ssl-date: 2019-06-01T22:14:33+00:00; +8h10m51s from scanner time.
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 8h10m51s, deviation: 0s, median: 8h10m50s
+| ms-sql-info: 
+|   192.168.0.220:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 
+|_    TCP port: 1433
+|_nbstat: NetBIOS name: SQL, NetBIOS user: <unknown>, NetBIOS MAC: 00:15:5d:00:c7:25 (Microsoft)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-06-01 18:14:32
+|_  start_date: 2019-06-01 10:11:35
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 39.03 seconds
+
+
+msf5 > db_nmap 192.168.0.220 -p-
+[*] Nmap: Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-01 18:33 EDT                              
+[*] Nmap: Stats: 0:00:08 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan              
+[*] Nmap: SYN Stealth Scan Timing: About 31.11% done; ETC: 18:34 (0:00:18 remaining)                   
+[*] Nmap: Nmap scan report for 192.168.0.220
+[*] Nmap: Host is up (0.00092s latency).
+[*] Nmap: Not shown: 65519 closed ports
+[*] Nmap: PORT      STATE SERVICE
+[*] Nmap: 22/tcp    open  ssh
+[*] Nmap: 135/tcp   open  msrpc
+[*] Nmap: 139/tcp   open  netbios-ssn
+[*] Nmap: 445/tcp   open  microsoft-ds
+[*] Nmap: 1433/tcp  open  ms-sql-s
+[*] Nmap: 3389/tcp  open  ms-wbt-server
+[*] Nmap: 5985/tcp  open  wsman
+[*] Nmap: 47001/tcp open  winrm
+[*] Nmap: 49664/tcp open  unknown
+[*] Nmap: 49665/tcp open  unknown
+[*] Nmap: 49666/tcp open  unknown
+[*] Nmap: 49667/tcp open  unknown
+[*] Nmap: 49668/tcp open  unknown
+[*] Nmap: 49669/tcp open  unknown
+[*] Nmap: 49670/tcp open  unknown
+[*] Nmap: 49672/tcp open  unknown
+[*] Nmap: MAC Address: 00:15:5D:00:C7:25 (Microsoft)                                                   
+[*] Nmap: Nmap done: 1 IP address (1 host up) scanned in 22.84 seconds 
+
+
+
+
+winrm
+msf5 auxiliary(scanner/winrm/winrm_auth_methods) > run
+
+[+] 192.168.0.220:5985: Negotiate protocol supported
+[+] 192.168.0.220:5985: Kerberos protocol supported
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+

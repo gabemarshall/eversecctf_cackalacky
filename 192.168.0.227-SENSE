@@ -1,0 +1,37 @@
+I’d rather stay here than go but I know that 
+I should leave as I sit here helpless 
+I think of our time together is it fading 
+
+----------------------------------
+
+t3hJul14n4Th30ry <-- in backup
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-01 05:37 EDT
+Nmap scan report for 192.168.0.227
+Host is up (0.0029s latency).
+Not shown: 65534 closed ports
+PORT     STATE SERVICE VERSION
+3000/tcp open  ppp?
+
+
+
+The 'update_url' parameter can be modified to direct the device to request an update from an arbitrary update_url
+
+Download the 'Backup Device' file
+
+the file is 'backup.tar.gz'
+
+Extract the files, then use binwalk the extract files within the archive
+
+binwalk -e sensor.update
+
+The files contain another tar,
+
+tar xvf F4
+
+Edit the update/sensor_update file to include new commands
+
+cat flag.txt
+
+4u9U571n837H4nY
+

